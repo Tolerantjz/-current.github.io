@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<!--<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>-->
+		<meta name="viewport" content="width=750" />
+		<title>免费视频</title>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	</head>
+	<body>
+		<!--header-->
+		<header>
+			<!--logo-->
+			<div class="up_header">
+				<div class="logo"></div>
+				<div class="up_content">
+					<p class="singer_tit">歌者盟 <span class="fSize">F码：464764</span></p>
+					<p class="register">注册时填写F码可免费获得K歌教程一套</p>
+				</div>
+				
+				<div class="red_download">
+					<a href="javascript:void(0)">点击下载</a>
+				</div>
+			</div>
+			<!--video-->
+			<div class="video_part">
+				<div class="play">
+					<div class="playBtn" id="playBtn">
+						<div class="redTriangle"></div>
+					</div>
+					<video class="play">
+					<source src="myvideo.mp4" type="video/mp4"></source>
+					<source src="myvideo.ogv" type="video/ogg"></source>
+					<source src="myvideo.webm" type="video/webm"></source>
+					<object width="" height="" type="application/x-shockwave-flash" data="myvideo.swf">
+						<param name="movie" value="myvideo.swf" />
+						<param name="flashvars" value="autostart=true&amp;file=myvideo.swf" />
+					</object>
+					当前浏览器不支持 video直接播放，点击这里下载视频： <a href="myvideo.webm">下载视频</a>
+				</video>
+				</div>
+				
+				<!--video_introduce-->
+				<div class="video_introduce">
+					<p class="video_title">超出换行超出换行超出换行超出换行超出换行超出换行超出换行超出换行超出换行</p>
+					<img class="show_content" id="show" src="img/展开箭头.png" alt="" />
+					<div id="showD">
+					<p class="video_describe" id="overHide">未超出不隐藏未超出不隐藏未超出不隐藏未超出不隐藏未超出不隐藏未超出不隐藏未超出不隐藏未超出不隐藏未超出不隐藏未超出不隐藏未超出不隐藏未超出不隐藏未超出不隐藏未超出不隐藏未超出不隐藏未超出不隐藏未超出不隐藏未超出不隐藏未超出不隐藏未超出不隐藏未超出不隐藏未超出不隐藏未超出不隐藏未超出不隐藏</p>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!--nav-->
+		<div class="knowledgeNav">
+			<p class="knowledgeTit">唱歌知识</p>
+			<ul class="knowledgeVideo">
+				<li>
+					<!--<img src="" alt="" />-->
+					<div class="testC"></div>
+					<i>对应播单中系列视频…</i>
+				</li>
+				<li>
+					<!--<img src="" alt="" />-->
+					<div class="testC"></div>
+					<i>低音下不来怎么解决</i>
+				</li>
+				<li>
+					<!--<img src="" alt="" />-->
+					<div class="testC"></div>
+					<i>对应播单中系列视频…</i>
+				</li>
+				<li>
+					<!--<img src="" alt="" />-->
+					<div class="testC"></div>
+					<i>低音下不来怎么解决</i>
+				</li>
+				<li>
+					<!--<img src="" alt="" />-->
+					<div class="testC"></div>
+					<i>对应播单中系列视频…</i>
+				</li>
+				<li>
+					<!--<img src="" alt="" />-->
+					<div class="testC"></div>
+					<i>低音下不来怎么解决</i>
+				</li>
+			</ul>
+		</div>
+		<!--打开app，发现更多-->
+		<div class="openToMore">
+			<p><img class="remove" src="img/绠ご.png"/>打开APP,发现更多练声唱歌技巧！</p>
+		</div>
+		<!--litle Boy-->
+		<div class="littleB">
+			
+		</div>
+		<!--<script src="js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>-->
+		<script type="text/javascript">
+			var overHide = document.getElementById("overHide");
+			var show = document.getElementById("show");
+			var bol = true;
+			var lH=parseInt(window.getComputedStyle(overHide).lineHeight);
+			var h=overHide.offsetHeight;
+			var showD=document.getElementById("showD");
+			var lines = h/lH;
+			console.log(h, lH, lines);
+
+			window.onload = function(){
+				if(lines>1){
+					showD.style.overflowY="hidden";
+				}
+				show.onclick=function(){
+					if(bol){
+						show.src="img/收起箭头.png";
+            //css里面有添加transition 属性
+            showD.style.height=h+"px";
+						bol=false;
+					}else{
+						show.src="img/展开箭头.png";
+						bol=true;
+						showD.style.height=31+"px";
+					}
+				}
+			}
+			
+			
+		</script>
+	</body>
+</html>
